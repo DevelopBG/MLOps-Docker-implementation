@@ -8,13 +8,13 @@ WORKDIR /app
 COPY . /app
 
 # install and needed packages specified in the requirements.txt
-RUN pip isntall --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 #MAKE PROT 5000 AVAILABLE TO THE WORKD OUTSIDE THIS CONTAINER
 EXPOSE 5000
 
 # DEFINE ENVIRONMENT VARIABLE
-ENV FLASK_APP=demo_app.python
+ENV FLASK_APP=demo_app.py
 
 
 # rund the Flask app
